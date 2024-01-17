@@ -1,0 +1,12 @@
+prefix=Template::GLib
+struct-prefix=Tmpl
+modules=Template::GLib::Raw::Types
+backups=backup,bitbucket,google-backup,azure-backup,hut
+hfile-prefix=
+lib=template-glib-1.0
+include-directory=/usr/include/template-glib-1.0
+exec=
+subprefixes=
+idir-avail=True
+extension=.js
+build-exclude=Template::GLib::Raw::Traps
