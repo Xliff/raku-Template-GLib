@@ -11,5 +11,7 @@ unit package Template::GLib::Raw::Definitions;
 constant template is export = 'template-glib-1.0',v0;
 
 class TmplScope           is repr<CPointer> does GLib::Roles::Pointers is export { }
+class TmplScopeResolver   is repr<CPointer> does GLib::Roles::Pointers is export { }
+class TmplSymbol          is repr<CPointer> does GLib::Roles::Pointers is export { }
 class TmplTemplate        is repr<CPointer> does GLib::Roles::Pointers is export { }
 class TmplTemplateLocator is repr<CPointer> does GLib::Roles::Pointers is export { }
