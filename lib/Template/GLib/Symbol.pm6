@@ -3,8 +3,11 @@ use v6.c;
 use Method::Also;
 use NativeCall;
 
+use GLib::Raw::Value;
 use Template::GLib::Raw::Types;
 use Template::GLib::Raw::Symbol;
+
+use GLib::Value;
 
 use GLib::Roles::Implementor;
 use GLib::Roles::Object;
@@ -62,7 +65,7 @@ class Template::GLib::Symbol {
       default {
         X::GLib::UnknownType.new(
           message => "Do not know how to handle a {
-                      .name } in .assign_object()"
+                      .^name } in .assign_object()"
         ).throw
       }
 
@@ -109,8 +112,16 @@ class Template::GLib::Symbol {
     TmplSymbolTypeEnum($tst)
   }
 
-  method get_value (GValue() $value) is also<get-value> {
+  proto method get_value (|)
+    is also<get-value>
+  { * }
+
+  multi method get_value {
+    samewith( GValue.new );
+  }
+  multi method get_value (GValue() $value, :$raw = False)  {
     tmpl_symbol_get_value($!tsym, $value);
+    propReturnObject($value, $raw, |GLib::Value.getTypePair);
   }
 
   method holds (Int() $type) {
