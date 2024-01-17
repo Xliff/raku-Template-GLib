@@ -23,7 +23,7 @@ sub tmpl_scope_get (TmplScope $self, Str $name)
 { * }
 
 sub tmpl_scope_list_symbols (TmplScope $self, gboolean $recursive)
-  returns Str
+  returns CArray[Str]
   is      native(template)
   is      export
 { * }
