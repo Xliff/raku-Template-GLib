@@ -2,11 +2,7 @@ use v6.c;
 
 use NativeCall;
 
-use Method::Also;
-use GLib::Raw::Object;
-use GLib::Raw::Structs;
-use GLib::Raw::Subs;
-use Template::GLib::Raw::Definitions;
+use Template::GLib::Raw::Types;
 use Template::GLib::Raw::Locator;
 
 use GIO::InputStream;

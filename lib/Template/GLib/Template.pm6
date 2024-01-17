@@ -4,13 +4,7 @@ use NativeCall;
 
 use Method::Also;
 
-use GLib::Raw::Definitions;
-use GLib::Raw::Object;
-use GLib::Raw::Structs;
-use GLib::Raw::Subs;
-use GIO::Raw::Definitions;
-use Template::GLib::Raw::Definitions;
-#use Template::GLib::Raw::Types;
+use Template::GLib::Raw::Types;
 use Template::GLib::Raw::Template;
 
 use GLib::Roles::Implementor;
